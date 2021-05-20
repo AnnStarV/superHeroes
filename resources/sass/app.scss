@@ -6,3 +6,13 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#container{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+form{
+    width:500px;
+}
