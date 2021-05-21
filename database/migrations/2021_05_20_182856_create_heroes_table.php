@@ -13,10 +13,7 @@ class CreateHeroesTable extends Migration
      */
     public function up()
     {
-        Schema::create('heroes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-        });
+      
     }
 
     /**
@@ -26,6 +23,6 @@ class CreateHeroesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('heroes');
+        
     }
 }
