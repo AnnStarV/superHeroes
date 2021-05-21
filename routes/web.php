@@ -1,13 +1,13 @@
 <?php
 
 Route::get('/', function () {
-    return view('home');
+    return view('addheroe');
 });
 
 Route::get('/modify', function () {
     return view('modify');
 });
 
-Route::get('/addheroe', function () {
-    return view('addheroe');
+Route::get('/home', function () {
+    return view('home');
 });
