@@ -58,7 +58,7 @@ class AddheroController extends Controller
                             'origin_description' => $req->input('discription'),'superpowers' => $req->input('tecniq'),
                             'catch_phrase'=> $req->input('phrase'),'image'=> $imagePath]);
         $data = DB::table('heroes')->select('hero_id','nickname', 'real_name','origin_description','superpowers','catch_phrase','image')->paginate(5);
-        return view('home', ['data' => $data]);
+        return redirect()->route('home')->with(['data' => $data]);
     }
 
     public function modifyData($id){
