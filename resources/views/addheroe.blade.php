@@ -45,7 +45,7 @@
             <div class="col-12">
               <label for="discription" class="form-label">Описание</label>
               <div class="input-group">
-                <span class="input-group-text"><img src="../assets/images/disc.png" width = 20px/></span>
+                <span class="input-group-text"><img src="{{asset('/assets/images/disc.png') }}" width = 20px/></span>
                 <textarea name="discription" class="form-control" id="discription" rows="4" placeholder="Наруто Узумаки (яп. うずまきナルト, Узумаки Наруто) — шиноби Деревни Скрытого Листа..." required=""></textarea> 
               </div>
             </div>
@@ -65,7 +65,7 @@
             <div class="col-12">
               <label for="photo" class="form-label">Выбрать фото</label>
               <div class="input-group">
-                <input name="photos[]" type="file" class="form-control-file" id="photos[]" multiple>
+                <input name="images" type="file" class="form-control-file" id="images">
               </div>
             </div>
 

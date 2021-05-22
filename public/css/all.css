@@ -11,10 +11,81 @@ body{
 }
 
 form{
-    width: 500px;
     max-width:500px;
 }
 
 #btn-add{
     margin-top: 25px;
+}
+.items-block{  
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.wrapper{
+    width: 60%;
+    margin: 20px;
+    color: #fff;
+}
+.item{
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.767);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+blockquote {
+    margin: 0;
+    color: #231E28;
+    padding: 10px 10px 10px 40px;
+    border-left: 4px solid #CBDDE7;
+    position: relative;
+    background: #FAF8EB;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    }
+blockquote:before{
+    content: "\201C";
+    font-family: Arial;
+    color: #CBDDE7;
+    font-size: 30px;
+    position: absolute;
+    left: 7px;
+    top: 2px;
+}
+blockquote p {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 0;  
+}
+
+.item-disc {
+    margin: 20px;
+}
+.item-phrase {
+    margin: 20px;
+}
+.item-buttons{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+.item-delete, .item-modify, .item-back{
+    margin: 10px;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    background-color: #007bff;
+}
+.item-back a, .item-modify a, .item-delete a{
+    color: #fff;
+    text-decoration: none;
+}
+.item-back a:hover, .item-modify a:hover, .item-delete a:hover{
+    text-decoration: none;
+    color: #fff;
 }
