@@ -7,9 +7,9 @@
     * в OpenServer зайти в терминал и выполнить ряд команд:
     * Узнаем установлен ли composer
     
-            ```
+            
             pip install foobar
-            ```
+            
             
          ![Alt-текст](https://bogdanowsky.ru/wp-content/uploads/2019/12/7.png "Орк")    
          
