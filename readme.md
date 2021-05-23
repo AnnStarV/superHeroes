@@ -27,7 +27,9 @@
                 </IfModule>
                 ```
       * Запускаю проект через браузер, и вижу варнинги
-      ![Alt-текст](https://bogdanowsky.ru/wp-content/uploads/2019/12/4.png "Орк")  
+      
+     ![Alt-текст](https://bogdanowsky.ru/wp-content/uploads/2019/12/4.png "Орк")  
+      
       Они означают, что Composer в проекте не установлен и папки vendor не существует, нужно его быстренько воткнуть.
                 ```bash
                 composer dump-autoload
