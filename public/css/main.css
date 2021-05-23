@@ -89,3 +89,33 @@ blockquote p {
     text-decoration: none;
     color: #fff;
 }
+.carousel {
+    height: 400px !important;
+    width: 800px;
+    margin: 0 auto;
+  }
+  .carousel-inner{
+    margin: 0 auto;
+  }
+  .item-image{
+    display:flex;
+    justify-content: center;
+  }
+  .carousel-inner img {
+    height: 400px !important;
+    display:flex;
+    justify-content: center;
+  }
+  .block-image{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .modfy-image{
+    min-width: 270px;
+    margin-left: 5px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}

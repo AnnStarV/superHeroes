@@ -65,7 +65,7 @@
             <div class="col-12">
               <label for="photo" class="form-label">Выбрать фото</label>
               <div class="input-group">
-                <input name="images" type="file" class="form-control-file" id="images">
+                <input name="image[]" type="file" class="form-control-file" id="images" multiple>
               </div>
             </div>
 

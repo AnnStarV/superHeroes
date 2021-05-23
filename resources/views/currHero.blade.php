@@ -20,7 +20,29 @@
             <blockquote>
             <p class="item-phrase">{{ $data->catch_phrase }}</p>
             </blockquote>
-           <p class="item-image"><img src="{{ asset('/storage/' . $data->image) }}"/></p>
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+              <div class="carousel-item active">
+              <p class="item-image"><img  src="{{ asset('/storage/' . $data->image[0]) }}"/></p>
+           </div>
+            <?php $sliced = array_slice($data->image, 1); ?>
+            @foreach($sliced as $el)
+             <div class="carousel-item">
+              <p class="item-image"><img  src="{{ asset('/storage/' . $el) }}"/></p>
+           </div>
+           @endforeach
+        </div>
+   
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
            <div class = "item-buttons">
                 <p class="item-back"><a href="{{route('home')}}">Вернуться</a></p>
                 <p class="item-modify"><a href="{{route('modify',['id'=>$data->hero_id])}}">Изменить</a></p>

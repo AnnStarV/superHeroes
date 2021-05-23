@@ -11,7 +11,7 @@
 
 <div class="container-fluid">
         <div class="row" id = "container">
-        <form action="{{route('modify-form', ['id'=>$data->hero_id])}}" method="post" enctype="multipart/form-data" class="add-form needs-validation" novalidate="">
+        <form  method="post" enctype="multipart/form-data" class="add-form needs-validation" novalidate="">
          @csrf
           <div class="row g-3">
             <div class="col-sm-6">
@@ -49,18 +49,36 @@
             </div>
             
             <div class="col-12">
-            <label for="photo" class="form-label">Текушее фото</label>
-            <p class="item-image"><img src="{{ asset('/storage/' . $data->image) }}"/></p>
+            <label for="photo" class="form-label">Текущее фото</label>
+            <?php $conter = 0;?>
+            @foreach($data->image as $key=> $el)
+            <?php $conter+=1;?>
+            <div class="block-image">
+            <p class="item-image"><img src="{{ asset('/storage/' . $el) }}"/></p>
+            <div class="modfy-image">
               <label for="photo" class="form-label">Выбрать фото</label>
               <div class="input-group">
-                <input name="image-last" value="{{ $data->image }}" type="hidden" class="form-control-file" id="images">
-                <input name="images" value="" type="file" class="form-control-file" id="images">
+                <input name="image-last-{{$conter}}" value="{{ $el }}" type="hidden" class="form-control-file" id="images">
+                </div>
+                <div class="input-group">
+                <input name="image-{{$conter}}[]" type="file" class="form-control-file" id="images">
+                <button class="w-100 btn btn-primary btn-lg" name="action" id="btn-add" type="submit" formaction="{{route('deleteimage',['id'=>$data->hero_id,'curr_image'=>$key])}}">Удалить</button>
+                <!--<p class="item-modify"><a href="{{route('deleteimage',['id'=>$data->hero_id,'curr_image'=>$el])}}">Удалить</a></p>-->
+              </div>
+              
+              </div>  
+              </div>
+            @endforeach
+            </div>
+            <div class="col-12">
+              <label for="photo" class="form-label">Добавить еще фото</label>
+              <div class="input-group">
+                <input name="image[]" type="file" class="form-control-file" id="images" multiple>
               </div>
             </div>
-
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg"  id="btn-add" type="submit">Изменить</button>
+          <button class="w-100 btn btn-primary btn-lg" name="action" formaction="{{route('modify-form', ['id'=>$data->hero_id])}}"  id="btn-add" type="submit">Изменить</button>
         </form>
       </div>
 </div>
