@@ -8,7 +8,7 @@
     * Узнаем установлен ли composer
     
             ```bash
-            composer
+            pip install foobar
             ```
             
          ![Alt-текст](https://bogdanowsky.ru/wp-content/uploads/2019/12/7.png "Орк")    
