@@ -5,10 +5,10 @@
 * установить Laravel 5.7-7.x через OpenServer
     * в OpenServer/domains/ создать папку с проектом
     * в OpenServer зайти в терминал и выполнить ряд команд:
-     * Узнаем установлен ли composer
-                ```bash
-                composer
-                ```
+    * Узнаем установлен ли composer
+            ```bash
+            composer
+            ```
          ![Alt-текст](https://bogdanowsky.ru/wp-content/uploads/2019/12/7.png "Орк")       
       * Если появилась такая картина, то composer в составе OpenServer работает.
         Я устанавливаю Laravel в папку c:\OSPanel\domains\app. Для этого я вхожу в нее перед установкой через командную строку.
