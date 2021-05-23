@@ -14,10 +14,10 @@
          ![Alt-текст](https://bogdanowsky.ru/wp-content/uploads/2019/12/7.png "Орк")    
          
       * Если появилась такая картина, то composer в составе OpenServer работает.
-        Я устанавливаю Laravel в папку c:\OSPanel\domains\app(app-название нашего проекта). Для этого я вхожу в нее перед установкой через командную строку.
+        Я устанавливаю Laravel в папку c:\OpenServer\domains\app(app-название нашего проекта). Для этого я вхожу в нее перед установкой через командную строку.
         
                
-                cd domains/app
+                cd domains\app
                 
                 
       * Затем устанавливаем пакет Laravel, введя команду:
